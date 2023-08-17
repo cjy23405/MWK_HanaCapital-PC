@@ -1,0 +1,22 @@
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__icon {
+    margin-bottom: 8px;
+    width: 48px;
+    height: 48px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+}

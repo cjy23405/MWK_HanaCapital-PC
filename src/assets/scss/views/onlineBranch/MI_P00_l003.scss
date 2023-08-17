@@ -1,0 +1,39 @@
+@import '@/assets/scss/components/import/division-info.scss';
+@import '@/assets/scss/components/import/basic-table.scss';
+@import '@/assets/scss/components/import/empty.scss';
+
+.accordion-contents {
+  margin-top: 20px;
+}
+
+.section-layout {
+  display: flex;
+  align-items: stretch;
+
+  &__col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+
+    & + & {
+      margin-left: 24px;
+    }
+  }
+
+  &__row {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+
+    & + & {
+      margin-top: 24px;
+    }
+  }
+
+  &__box {
+    flex: 1;
+  }
+}

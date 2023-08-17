@@ -1,0 +1,129 @@
+.wait {
+  width: 500px;
+  box-sizing: border-box;
+  padding: 60px 0;
+  border-radius: 20px;
+  background-color: $color-white;
+  text-align: center;
+
+  &__loading {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 24px;
+    position: relative;
+
+    > div {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: $color-green-50;
+      opacity: 0.2;
+      animation: wait-loading-animate 1.2s linear infinite;
+
+      &:nth-child(1) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:nth-child(2) {
+        top: 9px;
+        right: 8px;
+        animation-delay: 150ms;
+      }
+      &:nth-child(3) {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        animation-delay: 300ms;
+      }
+      &:nth-child(4) {
+        right: 8px;
+        bottom: 8px;
+        animation-delay: 450ms;
+      }
+      &:nth-child(5) {
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        animation-delay: 600ms;
+      }
+      &:nth-child(6) {
+        left: 8px;
+        bottom: 8px;
+        animation-delay: 750ms;
+      }
+      &:nth-child(7) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        animation-delay: 900ms;
+      }
+      &:nth-child(8) {
+        top: 9px;
+        left: 8px;
+        animation-delay: 1050ms;
+      }
+    }
+  }
+
+  &__count {
+    margin: 0;
+    padding: 0;
+
+    &-key {
+      @include font-size-default(16);
+      color: $color-gray-70;
+    }
+    &-val {
+      margin: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    &-num {
+      display: inline-block;
+      vertical-align: top;
+      @include font-size-head(32);
+      color: $color-green-50;
+    }
+    &-unit {
+      display: inline-block;
+      vertical-align: top;
+      @include font-size-default(16);
+      color: $color-gray-70;
+      margin: 16px 0 0 4px;
+    }
+  }
+
+  &__title {
+    margin: 30px 0 16px;
+    @include font-size-head(24);
+  }
+
+  &__text {
+    margin: 0;
+    @include font-size-default(16);
+  }
+
+  &__logo {
+    display: block;
+    margin: 40px auto 0;
+    width: 103px;
+    height: auto;
+  }
+}
+
+@keyframes wait-loading-animate {
+  0% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
