@@ -7,12 +7,14 @@ import { useUiHeaderStore } from '@/stores/ui/header';
 import PageContents from '@/components/ui/layout/PageContents.vue';
 import PageHead from '@/components/ui/text/PageHead.vue';
 import PageTitle from '@/components/ui/text/PageTitle.vue';
+import SimpleSelect from '@/components/ui/form/SimpleSelect.vue';
 
 export default {
   components: {
     PageContents,
     PageHead,
     PageTitle,
+    SimpleSelect,
   },
   setup() {
     const store = {
@@ -138,7 +140,7 @@ export default {
             </td>
             <td class="title required">주민등록번호</td>
             <td>
-              <div class="flex-container">
+              <div class="flex-container jcfs">
                 <input type="text" value="123456-1******" />
                 <button class="btn btn-s03">확인</button>
               </div>
@@ -155,14 +157,14 @@ export default {
             </td>
             <td class="title">사업자번호</td>
             <td>
-              <div class="flex-container">
+              <div class="flex-container jcfs">
                 <input type="text" value="" disabled />
                 <button class="btn btn-s04">확인</button>
               </div>
             </td>
             <td class="title">물품단가/수령</td>
             <td>
-              <div class="flex-container">
+              <div class="flex-container jcfs">
                 <input type="text" class="rt" value="840,000" disabled />원
                 <input type="text" class="rt" value="1" disabled />개
               </div>
@@ -197,14 +199,14 @@ export default {
             </td>
             <td class="title required">신용정보조회동의</td>
             <td>
-              <div class="flex-container">
+              <div class="flex-container jcfs">
                 <input type="text" value="온라인(SMS)" disabled />
                 <button class="btn btn-s03">선택</button>
               </div>
             </td>
             <td class="title">물품구입금액</td>
             <td>
-              <div class="flex-container">
+              <div class="flex-container jcfs">
                 <input type="text" class="rt" value="840,000" disabled />원
               </div>
             </td>
@@ -212,34 +214,50 @@ export default {
           <tr>
             <td class="title required">거래구분/관계</td>
             <td>
-              <div class="flex-container">
-                <div class="select-container">
-                  <select>
-                    <option>이용자</option>
-                  </select>
-                </div>
-                <div class="select-container">
-                  <select disabled>
-                    <option>본인</option>
-                  </select>
-                </div>
+              <div class="flex-container jcfs">
+                <SimpleSelect
+                  :options="[
+                    {
+                      value: '1',
+                      label: '이용자',
+                    },
+                  ]"
+                  title="조회기간"
+                  defaultValue="1"
+                  :classNames="{ wrap: 'input-width-regular' }"
+                />
+                <SimpleSelect
+                  :options="[
+                    {
+                      value: '1',
+                      label: '본인',
+                    },
+                  ]"
+                  title="조회기간"
+                  defaultValue="1"
+                  :classNames="{ wrap: 'input-width-regular' }"
+                  :disabled="true"
+                />
               </div>
             </td>
             <td class="title">할부신청금액</td>
             <td>
-              <div class="flex-container">
+              <div class="flex-container jcfs">
                 <input type="text" class="rt" value="840,000" disabled />원
               </div>
             </td>
             <td class="title">할부기간</td>
             <td>
-              <div class="flex-container">
-                <div class="select-container">
-                  <select>
-                    <option>7개월</option>
-                  </select>
-                </div>
-              </div>
+              <SimpleSelect
+                :options="[
+                  {
+                    value: '1',
+                    label: '7개월',
+                  },
+                ]"
+                title="조회기간"
+                defaultValue="1"
+              />
             </td>
           </tr>
           <tr>
@@ -325,7 +343,7 @@ export default {
           <tr class="hoverBgGray">
             <td class="txt-center">
               <div class="check-container">
-                <label class="flex-container">
+                <label class="flex-container jcfs">
                   <input type="checkbox" name="ok" />
                   <span @click="select($event)"></span>
                 </label>
@@ -339,7 +357,7 @@ export default {
           <tr class="hoverBgGray">
             <td class="txt-center">
               <div class="check-container">
-                <label class="flex-container">
+                <label class="flex-container jcfs">
                   <input type="checkbox" name="ok" />
                   <span></span>
                 </label>

@@ -25,20 +25,21 @@
   }
 }
 
-button {
+.btn {
   padding: 8px 12px;
   color: $color-black;
   border-radius: 8px;
   font-size: 14px;
   background-color: $color-white;
-  min-width: 52px;
   height: auto;
+  min-width: 50px;
   min-height: 40px;
   text-align: center;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 
   &:last-child {
     margin-right: 0;

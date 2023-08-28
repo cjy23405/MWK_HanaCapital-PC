@@ -15,8 +15,6 @@ import BoxCheck from '@/components/ui/form/BoxCheck.vue';
 import BoxCheckLabel from '@/components/ui/form/BoxCheckLabel.vue';
 import BoxCheckList from '@/components/ui/form/BoxCheckList.vue';
 import BoxCheckListItem from '@/components/ui/form/BoxCheckListItem.vue';
-import FormList from '@/components/ui/form/FormList.vue';
-import FormListItem from '@/components/ui/form/FormListItem.vue';
 import BasicButton from '@/components/ui/button/BasicButton.vue';
 import ButtonList from '@/components/ui/button/ButtonList.vue';
 import ButtonListItem from '@/components/ui/button/ButtonListItem.vue';
@@ -28,8 +26,9 @@ import KeyValue from '@/components/ui/text/KeyValue.vue';
 import KeyValueItem from '@/components/ui/text/KeyValueItem.vue';
 import KeyValueTitle from '@/components/ui/text/KeyValueTitle.vue';
 import KeyValueText from '@/components/ui/text/KeyValueText.vue';
-import FormInvalid from '@/components/ui/form/FormInvalid.vue';
-import FormInvalidMessage from '@/components/ui/form/FormInvalidMessage.vue';
+import RadioButton from '@/components/ui/form/RadioButton.vue';
+import RadioButtonObject from '@/components/ui/form/RadioButtonObject.vue';
+import RadioButtonLabelText from '@/components/ui/form/RadioButtonLabelText.vue';
 
 export default {
   components: {
@@ -44,8 +43,6 @@ export default {
     BoxCheckLabel,
     BoxCheckList,
     BoxCheckListItem,
-    FormList,
-    FormListItem,
     BasicButton,
     ButtonList,
     ButtonListItem,
@@ -57,8 +54,9 @@ export default {
     KeyValueItem,
     KeyValueTitle,
     KeyValueText,
-    FormInvalid,
-    FormInvalidMessage,
+    RadioButton,
+    RadioButtonObject,
+    RadioButtonLabelText,
   },
   setup() {
     const store = {
@@ -183,79 +181,73 @@ export default {
           </BoxCheckListItem>
         </BoxCheckList>
 
-        <!-- Case : 신용도 상승 선택 시 경우 노출 -->
-        <FormList :classNames="{ wrap: 'row-margin-contents' }">
-          <FormListItem titleText="상세사유" :forceFocus="true">
-            <FormInvalid :error="state.details001Error">
-              <BoxCheckList>
-                <BoxCheckListItem>
-                  <BoxCheck
-                    name="My_p05_p002_details001"
-                    id="My_p05_p002_details_001_001"
-                    :defaultChecked="true"
-                  >
-                    <BoxCheckLabel>신용평점(등급) 개선</BoxCheckLabel>
-                  </BoxCheck>
-                </BoxCheckListItem>
-                <BoxCheckListItem>
-                  <BoxCheck
-                    name="My_p05_p002_details001"
-                    id="My_p05_p002_details_001_002"
-                  >
-                    <BoxCheckLabel>재무상태 개선</BoxCheckLabel>
-                  </BoxCheck>
-                </BoxCheckListItem>
-                <BoxCheckListItem>
-                  <BoxCheck
-                    name="My_p05_p002_details001"
-                    id="My_p05_p002_details_001_003"
-                  >
-                    <BoxCheckLabel>기타 신용도 상승</BoxCheckLabel>
-                  </BoxCheck>
-                </BoxCheckListItem>
-              </BoxCheckList>
-              <FormInvalidMessage>Error Message</FormInvalidMessage>
-            </FormInvalid>
-          </FormListItem>
-        </FormList>
-        <!-- // Case : 신용도 상승 선택 시 경우 노출 -->
+        <!-- Case : 신용도 상승 선택 시 노출 -->
+        <div :class="[$style['check-list'], 'row-margin-contents']">
+          <ul :class="$style['check-list__list']">
+            <li :class="$style['check-list__item']">
+              <RadioButton
+                name="My_p05_p002_details001"
+                id="My_p05_p002_details001_001"
+              >
+                <RadioButtonObject />
+                <RadioButtonLabelText>신용평점(등급) 개선</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton
+                name="My_p05_p002_details001"
+                id="My_p05_p002_details001_002"
+              >
+                <RadioButtonObject />
+                <RadioButtonLabelText>재무상태 개선</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton
+                name="My_p05_p002_details001"
+                id="My_p05_p002_details001_003"
+              >
+                <RadioButtonObject />
+                <RadioButtonLabelText>기타 신용도 상승</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+          </ul>
+        </div>
+        <!-- // Case : 신용도 상승 선택 시 노출 -->
 
-        <!-- Case : 소득 재산 증가 선택 시 경우 노출 -->
-        <FormList :classNames="{ wrap: 'row-margin-contents' }">
-          <FormListItem titleText="상세사유" :forceFocus="true">
-            <FormInvalid :error="state.details002Error">
-              <BoxCheckList>
-                <BoxCheckListItem>
-                  <BoxCheck
-                    name="My_p05_p002_details001"
-                    id="My_p05_p002_details_001_004"
-                    :defaultChecked="true"
-                  >
-                    <BoxCheckLabel>소득증가</BoxCheckLabel>
-                  </BoxCheck>
-                </BoxCheckListItem>
-                <BoxCheckListItem>
-                  <BoxCheck
-                    name="My_p05_p002_details001"
-                    id="My_p05_p002_details_001_005"
-                  >
-                    <BoxCheckLabel>재상증가</BoxCheckLabel>
-                  </BoxCheck>
-                </BoxCheckListItem>
-                <BoxCheckListItem>
-                  <BoxCheck
-                    name="My_p05_p002_details001"
-                    id="My_p05_p002_details_001_006"
-                  >
-                    <BoxCheckLabel>기타 소득증가</BoxCheckLabel>
-                  </BoxCheck>
-                </BoxCheckListItem>
-              </BoxCheckList>
-              <FormInvalidMessage>Error Message</FormInvalidMessage>
-            </FormInvalid>
-          </FormListItem>
-        </FormList>
-        <!-- // Case : 소득 재산 증가 선택 시 경우 노출 -->
+        <!-- Case : 소득 재산 증가 선택 시 노출 -->
+        <div :class="[$style['check-list'], 'row-margin-contents']">
+          <ul :class="$style['check-list__list']">
+            <li :class="$style['check-list__item']">
+              <RadioButton
+                name="My_p05_p002_details002"
+                id="My_p05_p002_details002_001"
+              >
+                <RadioButtonObject />
+                <RadioButtonLabelText>소득증가</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton
+                name="My_p05_p002_details002"
+                id="My_p05_p002_details002_002"
+              >
+                <RadioButtonObject />
+                <RadioButtonLabelText>재산증가</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton
+                name="My_p05_p002_details002"
+                id="My_p05_p002_details002_003"
+              >
+                <RadioButtonObject />
+                <RadioButtonLabelText>기타 소득증가</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+          </ul>
+        </div>
+        <!-- // Case : 소득 재산 증가 선택 시 노출 -->
       </section>
 
       <section class="row-margin-block-small">
@@ -382,3 +374,7 @@ export default {
     </ButtonList>
   </PageContents>
 </template>
+
+<style lang="scss" module>
+@import '@/assets/scss/views/onlineBranch/My_p05_p002.scss';
+</style>

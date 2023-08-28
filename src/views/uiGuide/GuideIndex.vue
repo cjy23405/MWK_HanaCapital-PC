@@ -173,7 +173,12 @@ const datas = () => [
         path: '/identification/Common_P00_p003',
         status: 'end',
         create: '2023.05.19',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '약관동의',
@@ -303,6 +308,10 @@ const datas = () => [
             date: '2023.07.26',
             text: '아이디 로그인 버튼 클릭하여 로그인 후 메뉴 확인 가능',
           },
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
         ],
       },
     ],
@@ -319,7 +328,12 @@ const datas = () => [
         path: '/sign/Member_P01_p001',
         status: 'end',
         create: '2023.05.19',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '로그인\nMember_P01_p001',
@@ -345,6 +359,10 @@ const datas = () => [
           {
             date: '2023.08.11',
             text: 'Member_P02_l001 폼 타이틀 수정',
+          },
+          {
+            date: '2023.08.21',
+            text: 'Member_P02_l001 마우스 버튼(보안 키패드 버튼) 삭제',
           },
         ],
       },
@@ -401,7 +419,12 @@ const datas = () => [
         path: '/sign/Member_P04_p002',
         status: 'end',
         create: '2023.05.19',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '비밀번호 찾기\nMember_P04_p001',
@@ -434,7 +457,12 @@ const datas = () => [
         path: '/sign/Member_P05_p002',
         status: 'end',
         create: '2023.05.19',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '회원가입\nMember_P05_p001',
@@ -483,7 +511,12 @@ const datas = () => [
         path: '/customer/Customer_P01_p001',
         status: 'end',
         create: '2023.06.16',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '아코디언 오픈 시 노출되는 텍스트 크기 수정',
+          },
+        ],
       },
       {
         depth2: '고객상담',
@@ -505,7 +538,12 @@ const datas = () => [
         path: '/customer/Customer_P02_p002',
         status: 'end',
         create: '2023.06.16',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '고객상담',
@@ -678,7 +716,12 @@ const datas = () => [
         path: '/customer/Customer_P14_p002',
         status: 'end',
         create: '2023.06.14',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '개인정보이용현황',
@@ -832,7 +875,12 @@ const datas = () => [
         path: '/customer/Customer_P15_p001',
         status: 'end',
         create: '2023.06.16',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '전자민원접수',
@@ -914,7 +962,12 @@ const datas = () => [
         path: '/personal-loan/Main_P01_p003',
         status: 'end',
         create: '2023.06.09',
-        log: [],
+        log: [
+          {
+            date: '2023.08.18',
+            text: '타이틀 및 상품 문구 수정, 순서 변경',
+          },
+        ],
       },
       {
         depth2: 'e하나신용대출\nPF_P01_p001',
@@ -942,8 +995,22 @@ const datas = () => [
         status: 'end',
         create: '2023.05.26',
         log: [
-          { date: '2023.06.01', text: '팝업 추가\n- 온라인 약정\n- 1원 인증' },
-          { date: '2023.08.07', text: '팝업 추가\n- iSAS 설치 팝업' },
+          {
+            date: '2023.06.01',
+            text: '팝업 추가\n- 온라인 약정\n- 1원 인증',
+          },
+          {
+            date: '2023.08.07',
+            text: '팝업 추가\n- iSAS 설치 팝업',
+          },
+          {
+            date: '2023.08.21',
+            text: 'PF_P01_l002 마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+          {
+            date: '2023.08.23',
+            text: 'PF_P01_l002 공동인증서 케이스 추가',
+          },
         ],
       },
       {
@@ -955,7 +1022,12 @@ const datas = () => [
         path: '/personal-loan/PF_P01_p002',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: 'e하나신용대출\nPF_P01_p001',
@@ -966,7 +1038,12 @@ const datas = () => [
         path: '/personal-loan/PF_P01_p003',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: 'e하나신용대출\nPF_P01_p001',
@@ -1010,7 +1087,7 @@ const datas = () => [
         path: '/personal-loan/PF_P01_p005',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [{ date: '2023.08.23', text: '비대면 개설 영역 삭제' }],
       },
       {
         depth2: 'e하나신용대출\nPF_P01_p001',
@@ -1134,7 +1211,12 @@ const datas = () => [
         path: '/personal-loan/PF_P02_p002',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '행복아파트론\nPF_P02_p001',
@@ -1145,7 +1227,12 @@ const datas = () => [
         path: '/personal-loan/PF_P02_p003',
         status: 'end',
         create: '2023.06.14',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '행복아파트론\nPF_P02_p001',
@@ -1167,7 +1254,7 @@ const datas = () => [
         path: '/personal-loan/PF_P02_p005',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [{ date: '2023.08.23', text: '비대면 개설 영역 삭제' }],
       },
       {
         depth2: '행복아파트론\nPF_P02_p001',
@@ -1254,7 +1341,12 @@ const datas = () => [
         path: '/personal-loan/PF_P04_p002',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '원큐자동차담보대출\nPF_P04_p001',
@@ -1265,7 +1357,12 @@ const datas = () => [
         path: '/personal-loan/PF_P04_p003',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '원큐자동차담보대출\nPF_P04_p001',
@@ -1287,7 +1384,7 @@ const datas = () => [
         path: '/personal-loan/PF_P04_p005',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [{ date: '2023.08.23', text: '비대면 개설 영역 삭제' }],
       },
       {
         depth2: '원큐자동차담보대출\nPF_P04_p001',
@@ -1336,7 +1433,12 @@ const datas = () => [
         path: '/personal-loan/PF_P05_p002',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '우수고객추가대출\nPF_P05_p001',
@@ -1347,7 +1449,12 @@ const datas = () => [
         path: '/personal-loan/PF_P05_p003',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '우수고객추가대출\nPF_P05_p001',
@@ -1369,7 +1476,7 @@ const datas = () => [
         path: '/personal-loan/PF_P05_p005',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [{ date: '2023.08.23', text: '비대면 개설 영역 삭제' }],
       },
       {
         depth2: '우수고객추가대출\nPF_P05_p001',
@@ -1430,10 +1537,29 @@ const datas = () => [
         status: 'end',
         create: '2023.05.26',
         log: [
-          { date: '2023.06.09', text: '팝업 추가\n- 월납입금 조회' },
+          {
+            date: '2023.06.09',
+            text: '팝업 추가\n- 월납입금 조회',
+          },
           {
             date: '2023.08.11',
             text: 'PF_P07_l003 타이틀 수정 및 항목 삭제',
+          },
+          {
+            date: '2023.08.21',
+            text: 'PF_P07_l002 마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+          {
+            date: '2023.08.23',
+            text: 'PF_P07_l002 공동인증서 케이스 추가',
+          },
+          {
+            date: '2023.08.24',
+            text: '팝업추가\n- PF_P07_l101 약관보기 팝업',
+          },
+          {
+            date: '2023.08.25',
+            text: '팝업추가\n- PF_P07_l301 대출 전 주요 체크포인트 팝업',
           },
         ],
       },
@@ -1489,6 +1615,10 @@ const datas = () => [
             date: '2023.08.11',
             text: '연락처 폼 삭제',
           },
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
         ],
       },
       {
@@ -1504,6 +1634,10 @@ const datas = () => [
           {
             date: '2023.07.19',
             text: '거래유형 라디오로 변경\n손님정보 주민등록번호 항목 포멧 변경',
+          },
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
           },
         ],
       },
@@ -1576,7 +1710,12 @@ const datas = () => [
         path: '/personal-loan/PF_P07_p011',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '스탁론\nPF_P07_p000',
@@ -1636,7 +1775,12 @@ const datas = () => [
         path: '/personal-loan/PF_P09_p002',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '사업자주택담보대출\nPF_P09_p001',
@@ -1647,7 +1791,12 @@ const datas = () => [
         path: '/personal-loan/PF_P09_p003',
         status: 'end',
         create: '2023.06.14',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '사업자주택담보대출\nPF_P09_p001',
@@ -1701,7 +1850,12 @@ const datas = () => [
         path: '/business/BF_P00_main',
         status: 'end',
         create: '2023.06.09',
-        log: [],
+        log: [
+          {
+            date: '2023.08.18',
+            text: '타이틀 문구 수정',
+          },
+        ],
       },
       {
         depth2: '의료비∙설비',
@@ -1758,6 +1912,17 @@ const datas = () => [
       },
       {
         depth2: '메인\nMI_P00_p001',
+        depth3: '계약미보유,\n종료계약만 보유',
+        depth4: '',
+        depth5: '',
+        depth6: '',
+        path: '/online-branch/MI_P00_p001_empty',
+        status: 'end',
+        create: '2023.08.25',
+        log: [],
+      },
+      {
+        depth2: '메인\nMI_P00_p001',
         depth3: '팝업',
         depth4: '',
         depth5: '',
@@ -1801,7 +1966,12 @@ const datas = () => [
         path: '/online-branch/MI_P00_p002',
         status: 'end',
         create: '2023.06.09',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -1817,6 +1987,10 @@ const datas = () => [
             date: '2023.08.11',
             text: '유의사항 추가',
           },
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
         ],
       },
       {
@@ -1828,7 +2002,12 @@ const datas = () => [
         path: '/online-branch/MI_P00_p004',
         status: 'end',
         create: '2023.06.01',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -1861,7 +2040,12 @@ const datas = () => [
         path: '/online-branch/MI_P00_p007',
         status: 'end',
         create: '2023.06.01',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -1894,7 +2078,12 @@ const datas = () => [
         path: '/online-branch/MI_P00_p010',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -1927,7 +2116,12 @@ const datas = () => [
         path: '/online-branch/My_p04_p001',
         status: 'end',
         create: '2023.06.01',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -1960,7 +2154,12 @@ const datas = () => [
         path: '/online-branch/MI_P00_p013',
         status: 'end',
         create: '2023.06.01',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -1971,7 +2170,12 @@ const datas = () => [
         path: '/online-branch/MI_P00_p014',
         status: 'end',
         create: '2023.05.26',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -1982,7 +2186,12 @@ const datas = () => [
         path: '/online-branch/MI_P00_p015',
         status: 'end',
         create: '2023.06.01',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '모델명, 계약번호 표기법 변경',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -2026,7 +2235,12 @@ const datas = () => [
         path: '/online-branch/My_p05_p002',
         status: 'end',
         create: '2023.06.01',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '라디오 버튼 스타일 수정',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -2149,7 +2363,12 @@ const datas = () => [
         path: '/online-branch/My_P08_p010',
         status: 'end',
         create: '2023.06.02',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -2171,7 +2390,12 @@ const datas = () => [
         path: '/online-branch/My_P08_p012',
         status: 'end',
         create: '2023.06.02',
-        log: [],
+        log: [
+          {
+            date: '2023.08.18',
+            text: '하단 안내 문구 추가',
+          },
+        ],
       },
       {
         depth2: '계약정보',
@@ -2490,7 +2714,12 @@ const datas = () => [
         path: '/online-branch/MI_P01_p001',
         status: 'end',
         create: '2023.06.09',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '내정보관리',
@@ -2708,7 +2937,7 @@ const datas = () => [
         path: '/additional-service/My_P05_p012',
         status: 'end',
         create: '2023.06.02',
-        log: [],
+        log: [{ date: '2023.08.18', text: '안내 문구 간격 수정' }],
       },
       {
         depth2: '서류등록',
@@ -3134,6 +3363,10 @@ const datas = () => [
             date: '2023.07.27',
             text: '소유지 거주여부 항목 위치 수정',
           },
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
         ],
       },
       {
@@ -3256,7 +3489,12 @@ const datas = () => [
         path: '/auto/Main_P01_p002',
         status: 'end',
         create: '2023.06.09',
-        log: [],
+        log: [
+          {
+            date: '2023.08.18',
+            text: '타이틀 및 서브타이틀 문구 수정',
+          },
+        ],
       },
       {
         depth2: '다이렉트 장기렌터카\nAF_P01_p001',
@@ -3271,6 +3509,10 @@ const datas = () => [
           {
             date: '2023.07.19',
             text: '상품안내 내용 수정',
+          },
+          {
+            date: '2023.08.18',
+            text: '견적조회, 렌터카 상담신청 버튼 삭제',
           },
         ],
       },
@@ -3288,29 +3530,11 @@ const datas = () => [
             date: '2023.06.23',
             text: '팝업 추가\n- 모바일 진행 URL 전송 팝업',
           },
+          {
+            date: '2023.08.18',
+            text: 'AF_P01_l002 팝업 삭제',
+          },
         ],
-      },
-      {
-        depth2: '다이렉트 장기렌터카\nAF_P01_p001',
-        depth3: '견적조회\nAF_P01_p002\n렌터카신청\nAF_P01_p003',
-        depth4: '',
-        depth5: '',
-        depth6: '',
-        path: '/auto/AF_P01_p002',
-        status: 'end',
-        create: '2023.06.09',
-        log: [],
-      },
-      {
-        depth2: '다이렉트 장기렌터카\nAF_P01_p001',
-        depth3: '렌터카신청',
-        depth4: '신청완료\nAF_P01_p004',
-        depth5: '',
-        depth6: '',
-        path: '/auto/AF_P01_p004',
-        status: 'end',
-        create: '2023.06.02',
-        log: [],
       },
       {
         depth2: '다이렉트 오토리스\nAF_P02_p001',
@@ -3326,29 +3550,11 @@ const datas = () => [
             date: '2023.07.19',
             text: '상품안내 내용 수정',
           },
+          {
+            date: '2023.08.23',
+            text: '버튼 삭제 및 컬러 변경',
+          },
         ],
-      },
-      {
-        depth2: '다이렉트 오토리스\nAF_P02_p001',
-        depth3: '견적조회\nAF_P02_p002\nAF_P02_p003',
-        depth4: '',
-        depth5: '',
-        depth6: '',
-        path: '/auto/AF_P02_p002',
-        status: 'end',
-        create: '2023.06.09',
-        log: [],
-      },
-      {
-        depth2: '다이렉트 오토리스\nAF_P02_p001',
-        depth3: '리스신청',
-        depth4: '신청완료\nAF_P02_p004',
-        depth5: '',
-        depth6: '',
-        path: '/auto/AF_P02_p004',
-        status: 'end',
-        create: '2023.06.02',
-        log: [],
       },
       {
         depth2: '오토할부\nAF_P03_p001',
@@ -3672,7 +3878,12 @@ const datas = () => [
         path: '/auto/AF_P07_p009',
         status: 'end',
         create: '2023.06.02',
-        log: [],
+        log: [
+          {
+            date: '2023.08.21',
+            text: '마우스 버튼(보안 키패드 버튼) 삭제',
+          },
+        ],
       },
       {
         depth2: '오토승계\nAF_P07_p001',
@@ -3726,7 +3937,12 @@ const datas = () => [
         path: '/membership/MI_P03_p001',
         status: 'end',
         create: '2023.06.21',
-        log: [],
+        log: [
+          {
+            date: '2023.08.25',
+            text: '아코디언 오픈 시 노출되는 텍스트 크기 수정',
+          },
+        ],
       },
       {
         depth2: '멤버십 안내\nMI_P03_p002',
@@ -3849,22 +4065,6 @@ const datas = () => [
         depth5: '',
         depth6: '',
         path: '/hana-money/MI_P02_p003',
-        status: 'end',
-        create: '2023.06.09',
-        log: [],
-      },
-    ],
-  },
-  {
-    depth1: '제휴광장',
-    datas: [
-      {
-        depth2: '메인\nPartner_P00_p001',
-        depth3: '',
-        depth4: '',
-        depth5: '',
-        depth6: '',
-        path: '/affiliate-plaza/Partner_P00_p001',
         status: 'end',
         create: '2023.06.09',
         log: [],
@@ -4535,7 +4735,12 @@ const datas = () => [
         path: '/ui-guide/agent-005',
         status: 'end',
         create: '2023.08.16',
-        log: [],
+        log: [
+          {
+            date: '2023.08.24',
+            text: 'Agent_P09_l001 하단 버튼 고정 기능 제거',
+          },
+        ],
       },
       {
         depth2: '채권양수도',
@@ -4546,7 +4751,12 @@ const datas = () => [
         path: '/agent/Agent_P09_p001',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '채권양수도',
@@ -4557,7 +4767,12 @@ const datas = () => [
         path: '/agent/Agent_P09_p002',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '채권양수도',
@@ -4568,7 +4783,12 @@ const datas = () => [
         path: '/agent/Agent_P09_p003',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '채권양수도',
@@ -4579,7 +4799,12 @@ const datas = () => [
         path: '/agent/Agent_P09_p005',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '채권양수도',
@@ -4590,7 +4815,12 @@ const datas = () => [
         path: '/agent/Agent_P09_p006',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '선정산',
@@ -4601,7 +4831,12 @@ const datas = () => [
         path: '/agent/Agent_P10_p001',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '선정산',
@@ -4612,7 +4847,12 @@ const datas = () => [
         path: '/agent/Agent_P10_p002',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '선정산',
@@ -4623,7 +4863,12 @@ const datas = () => [
         path: '/agent/Agent_P10_p003',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '선정산',
@@ -4634,7 +4879,12 @@ const datas = () => [
         path: '/agent/Agent_P10_p004',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
       {
         depth2: '선정산',
@@ -4645,7 +4895,12 @@ const datas = () => [
         path: '/agent/Agent_P10_p005',
         status: 'end',
         create: '2023.07.07',
-        log: [],
+        log: [
+          {
+            date: '2023.08.23',
+            text: '소스 전면 재작업',
+          },
+        ],
       },
     ],
   },

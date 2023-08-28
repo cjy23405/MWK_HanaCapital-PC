@@ -68,6 +68,12 @@ html {
     & #app {
       overflow: hidden;
     }
+    & #app {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
   }
 }
 
@@ -247,6 +253,9 @@ body,
   }
   &-wide {
     width: 400px;
+  }
+  &-double-wide {
+    width: 800px;
   }
 }
 

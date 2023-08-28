@@ -398,7 +398,13 @@ export default {
             <PopupText>// contents</PopupText>
             <PopupText>최대 높이 800px</PopupText>
 
-            <BasicButton @click="layerOpenTest002">높이 고정 팝업</BasicButton>
+            <BasicButton
+              @click="
+                layerSlotProps.close();
+                layerOpenTest002();
+              "
+              >높이 고정 팝업</BasicButton
+            >
 
             <div style="height: 1500px; border: 10px dotted #666">
               스크롤 생기게 하기 위한 더미
@@ -1767,6 +1773,54 @@ export default {
     </section>
 
     <section class="test-section">
+      <h2 class="test-section-title">Check List</h2>
+      <div class="test-section-sub">
+        <h3 class="test-section-sub-title">Default</h3>
+
+        <div :class="[$style['check-list'], 'row-margin-contents']">
+          <ul :class="$style['check-list__list']">
+            <li :class="$style['check-list__item']">
+              <RadioButton name="testCheckList001" id="testCheckList001_001">
+                <RadioButtonObject />
+                <RadioButtonLabelText>신용평점(등급) 개선</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton name="testCheckList001" id="testCheckList001_002">
+                <RadioButtonObject />
+                <RadioButtonLabelText>재무상태 개선</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton name="testCheckList001" id="testCheckList001_003">
+                <RadioButtonObject />
+                <RadioButtonLabelText>기타 신용도 상승</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton name="testCheckList001" id="testCheckList001_004">
+                <RadioButtonObject />
+                <RadioButtonLabelText>소득증가</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton name="testCheckList001" id="testCheckList001_005">
+                <RadioButtonObject />
+                <RadioButtonLabelText>재산증가</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+            <li :class="$style['check-list__item']">
+              <RadioButton name="testCheckList001" id="testCheckList001_006">
+                <RadioButtonObject />
+                <RadioButtonLabelText>기타 소득증가</RadioButtonLabelText>
+              </RadioButton>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="test-section">
       <h2 class="test-section-title">Form</h2>
       <div class="test-section-sub">
         <h3 class="test-section-sub-title">Default</h3>
@@ -2429,6 +2483,153 @@ export default {
             <SearchButton />
           </InputBlockCell>
         </InputBlock>
+      </div>
+
+      <div class="test-section-sub">
+        <h3 class="test-section-sub-title">Placeholder</h3>
+
+        <FormList>
+          <FormListItem titleText="title text" target="#testInput019">
+            <FormInvalid :error="state.testError001">
+              <InputBlock :error="state.testError001">
+                <InputBlockCell :flexible="true">
+                  <BasicInput
+                    title="title"
+                    id="testInput019"
+                    placeholder="placeholder"
+                  />
+                </InputBlockCell>
+              </InputBlock>
+              <FormInvalidMessage>Error Message</FormInvalidMessage>
+            </FormInvalid>
+          </FormListItem>
+
+          <FormListItem
+            titleText="title text"
+            :selectOnly="true"
+            target="#testInput020"
+          >
+            <FormInvalid :error="state.testError001">
+              <InputBlock :error="state.testError001">
+                <InputBlockCell :flexible="true">
+                  <BasicSelect
+                    :options="[
+                      {
+                        value: '1',
+                        label: 'Option 001',
+                      },
+                      {
+                        value: '2',
+                        label: 'Option 002',
+                      },
+                      {
+                        value: '3',
+                        label: 'Option 003',
+                      },
+                      {
+                        value: '4',
+                        label: 'Option 004',
+                      },
+                      {
+                        value: '5',
+                        label: 'Option 005',
+                      },
+                      {
+                        value: '6',
+                        label: 'Option 006',
+                      },
+                      {
+                        value: '7',
+                        label: 'Option 007',
+                      },
+                      {
+                        value: '8',
+                        label: 'Option 008',
+                      },
+                    ]"
+                    title="title"
+                    inputId="testInput020"
+                    placeholder="placeholder"
+                  />
+                </InputBlockCell>
+              </InputBlock>
+              <FormInvalidMessage>Error Message</FormInvalidMessage>
+            </FormInvalid>
+          </FormListItem>
+
+          <FormListItem
+            titleText="title text"
+            :forceFocus="true"
+            target="#testInput021"
+          >
+            <FormInvalid :error="state.testError001">
+              <InputBlock :error="state.testError001">
+                <InputBlockCell :flexible="true">
+                  <BasicInput
+                    title="title"
+                    id="testInput021"
+                    placeholder="placeholder"
+                  />
+                </InputBlockCell>
+              </InputBlock>
+              <FormInvalidMessage>Error Message</FormInvalidMessage>
+            </FormInvalid>
+          </FormListItem>
+
+          <FormListItem
+            titleText="title text"
+            :forceFocus="true"
+            :selectOnly="true"
+            target="#testInput022"
+          >
+            <FormInvalid :error="state.testError001">
+              <InputBlock :error="state.testError001">
+                <InputBlockCell :flexible="true">
+                  <BasicSelect
+                    :options="[
+                      {
+                        value: '1',
+                        label: 'Option 001',
+                      },
+                      {
+                        value: '2',
+                        label: 'Option 002',
+                      },
+                      {
+                        value: '3',
+                        label: 'Option 003',
+                      },
+                      {
+                        value: '4',
+                        label: 'Option 004',
+                      },
+                      {
+                        value: '5',
+                        label: 'Option 005',
+                      },
+                      {
+                        value: '6',
+                        label: 'Option 006',
+                      },
+                      {
+                        value: '7',
+                        label: 'Option 007',
+                      },
+                      {
+                        value: '8',
+                        label: 'Option 008',
+                      },
+                    ]"
+                    title="title"
+                    inputId="testInput022"
+                    placeholder="placeholder"
+                  />
+                </InputBlockCell>
+              </InputBlock>
+              <FormInvalidMessage>Error Message</FormInvalidMessage>
+            </FormInvalid>
+          </FormListItem>
+        </FormList>
       </div>
     </section>
 

@@ -731,6 +731,11 @@ const routes = [
     component: () => import('@/views/onlineBranch/MI_P00_p001.vue'),
   },
   {
+    path: '/online-branch/MI_P00_p001_empty',
+    name: '/online-branch/MI_P00_p001_empty',
+    component: () => import('@/views/onlineBranch/MI_P00_p001_empty.vue'),
+  },
+  {
     path: '/online-branch/MI_P00_p002',
     name: '/online-branch/MI_P00_p002',
     component: () => import('@/views/onlineBranch/MI_P00_p002.vue'),
@@ -1390,26 +1395,6 @@ const routes = [
 
   // auto
   {
-    path: '/auto/AF_P01_p002',
-    name: '/auto/AF_P01_p002',
-    component: () => import('@/views/auto/AF_P01_p002.vue'),
-  },
-  {
-    path: '/auto/AF_P01_p004',
-    name: '/auto/AF_P01_p004',
-    component: () => import('@/views/auto/AF_P01_p004.vue'),
-  },
-  {
-    path: '/auto/AF_P02_p002',
-    name: '/auto/AF_P02_p002',
-    component: () => import('@/views/auto/AF_P02_p002.vue'),
-  },
-  {
-    path: '/auto/AF_P02_p004',
-    name: '/auto/AF_P02_p004',
-    component: () => import('@/views/auto/AF_P02_p004.vue'),
-  },
-  {
     path: '/auto/AF_P06_p002',
     name: '/auto/AF_P06_p002',
     component: () => import('@/views/auto/AF_P06_p002.vue'),
@@ -1766,13 +1751,6 @@ const routes = [
     path: '/company/Company_P05_p005',
     name: '/company/Company_P05_p005',
     component: () => import('@/views/company/Company_P05_p005.vue'),
-  },
-
-  // affiliate-plaza
-  {
-    path: '/affiliate-plaza/Partner_P00_p001',
-    name: '/affiliate-plaza/Partner_P00_p001',
-    component: () => import('@/views/affiliatePlaza/Partner_P00_p001.vue'),
   },
 
   // agent

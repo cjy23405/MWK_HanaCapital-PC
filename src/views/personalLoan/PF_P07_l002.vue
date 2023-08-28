@@ -19,7 +19,6 @@ import BasicInput from '@/components/ui/form/BasicInput.vue';
 import FormInvalid from '@/components/ui/form/FormInvalid.vue';
 import BasicSelect from '@/components/ui/form/BasicSelect.vue';
 import FormInvalidMessage from '@/components/ui/form/FormInvalidMessage.vue';
-import SecurityKeypadButton from '@/components/ui/button/SecurityKeypadButton.vue';
 
 export default {
   components: {
@@ -40,7 +39,6 @@ export default {
     FormInvalid,
     BasicSelect,
     FormInvalidMessage,
-    SecurityKeypadButton,
   },
   setup() {
     const state = reactive({
@@ -114,9 +112,10 @@ export default {
           </InputBlock>
         </FormListItem>
 
+        <!-- Case : 공동인증서가 있는 경우 -->
         <FormListItem
           titleText="공동인증서"
-          target="#PF_P07_l002_certificate"
+          target="#PF_P07_l002_certificate001"
           :selectOnly="true"
         >
           <FormInvalid :error="state.certificateError">
@@ -130,7 +129,7 @@ export default {
                     },
                   ]"
                   title="공동인증서"
-                  inputId="PF_P07_l002_certificate"
+                  inputId="PF_P07_l002_certificate001"
                   defaultValue="1"
                 />
               </InputBlockCell>
@@ -149,13 +148,30 @@ export default {
                   id="PF_P07_l002_password"
                 />
               </InputBlockCell>
-              <InputBlockCell>
-                <SecurityKeypadButton />
-              </InputBlockCell>
             </InputBlock>
             <FormInvalidMessage>Error Message</FormInvalidMessage>
           </FormInvalid>
         </FormListItem>
+        <!-- // Case : 공동인증서가 있는 경우 -->
+
+        <!-- Case : 공동인증서가 없는 경우 -->
+        <FormListItem
+          titleText="공동인증서"
+          target="#PF_P01_l002_certificate002"
+          :disabled="true"
+        >
+          <InputBlock :disabled="true">
+            <InputBlockCell :flexible="true">
+              <BasicInput
+                title="공동인증서"
+                defaultValue="공동인증서가 없습니다"
+                :disabled="true"
+                id="PF_P01_l002_certificate002"
+              />
+            </InputBlockCell>
+          </InputBlock>
+        </FormListItem>
+        <!-- // Case : 공동인증서가 없는 경우 -->
       </FormList>
 
       <template v-slot:foot>

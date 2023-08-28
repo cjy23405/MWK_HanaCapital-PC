@@ -39,6 +39,8 @@ export default {
       byte.value = b;
     }
 
+    byteLength(textarea.value);
+
     return {
       layer,
       byte,
@@ -137,14 +139,14 @@ export default {
                 <div class="flex-container jcfs">
                   <div class="radio-container">
                     <label class="flex-container jcfs">
-                      <input type="radio" name="type" checked />
+                      <input type="radio" name="P02_l007_type" checked />
                       <span class="small"></span>
                       URL 동의
                     </label>
                   </div>
                   <div class="radio-container">
                     <label class="flex-container jcfs">
-                      <input type="radio" name="type" />
+                      <input type="radio" name="P02_l007_type" />
                       <span class="small"></span>
                       ARS 동의
                     </label>
