@@ -38,6 +38,7 @@ import UiAccordionItem from '@/components/ui/accordion/UiAccordionItem.vue';
 import UiAccordionLayer from '@/components/ui/accordion/UiAccordionLayer.vue';
 import UiAccordionOpener from '@/components/ui/accordion/UiAccordionOpener.vue';
 import TextButton from '@/components/ui/button/TextButton.vue';
+import RoundStatus from '@/components/ui/text/RoundStatus.vue';
 
 import IconNotice from '@/assets/images/icon/information.svg?component';
 
@@ -79,6 +80,7 @@ export default {
     UiAccordionLayer,
     UiAccordionOpener,
     TextButton,
+    RoundStatus,
 
     IconNotice,
   },
@@ -116,16 +118,17 @@ export default {
         <BasicBoxHead>
           <BasicBoxHeadLeft>
             <h3 class="text-title-2 font-weight-medium">신용대출</h3>
-            <div :class="[$style['division-info'], 'row-margin-item-small']">
-              <ul :class="$style['division-info__list']">
-                <li :class="$style['division-info__item']">
-                  <div class="text-body-3 color-gray-tertiary">
-                    L99999999999999
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <p class="text-body-3 color-gray-tertiary row-margin-item-small">
+              L99999999999999
+            </p>
           </BasicBoxHeadLeft>
+          <!-- Case : 연체 -->
+          <BasicBoxHeadRight>
+            <RoundStatus theme="nonary" size="large" :block="true">
+              연체
+            </RoundStatus>
+          </BasicBoxHeadRight>
+          <!-- // Case : 연체 -->
         </BasicBoxHead>
 
         <KeyValue :wrap="true" :col="3">
@@ -174,19 +177,20 @@ export default {
         <BasicBoxHead>
           <BasicBoxHeadLeft>
             <h3 class="text-title-2 font-weight-medium">오토리스 20고5678</h3>
-            <div :class="[$style['division-info'], 'row-margin-item-small']">
-              <ul :class="$style['division-info__list']">
-                <li :class="$style['division-info__item']">
-                  <div class="text-body-3 color-gray-tertiary">BMW 435d</div>
-                </li>
-                <li :class="$style['division-info__item']">
-                  <div class="text-body-3 color-gray-tertiary">
-                    L99999999999999
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <p class="text-body-3 color-gray-tertiary row-margin-item-small">
+              BMW 435d
+            </p>
+            <p class="text-body-3 color-gray-tertiary row-margin-item-small">
+              L99999999999999
+            </p>
           </BasicBoxHeadLeft>
+          <!-- Case : 연체 -->
+          <BasicBoxHeadRight>
+            <RoundStatus theme="nonary" size="large" :block="true">
+              연체
+            </RoundStatus>
+          </BasicBoxHeadRight>
+          <!-- // Case : 연체 -->
         </BasicBoxHead>
 
         <KeyValue :wrap="true" :col="3">
@@ -728,20 +732,28 @@ export default {
                     </BasicBoxHeadRight>
                   </BasicBoxHead>
 
-                  <KeyValue>
+                  <KeyValue align="left">
                     <KeyValueItem>
-                      <KeyValueTitle>자동이체 계좌</KeyValueTitle>
+                      <KeyValueTitle
+                        :classNames="{
+                          title: $style['account-title'],
+                        }"
+                        >자동이체 계좌</KeyValueTitle
+                      >
                       <KeyValueText
                         >하나 123-123456-12345 (홍길동)</KeyValueText
                       >
                     </KeyValueItem>
                     <KeyValueItem>
-                      <KeyValueTitle>가상계좌</KeyValueTitle>
+                      <KeyValueTitle
+                        :classNames="{
+                          title: $style['account-title'],
+                        }"
+                        >가상계좌</KeyValueTitle
+                      >
                       <KeyValueText>
-                        <KeyValue>
-                          <KeyValueItem
-                            :classNames="{ item: 'justify-conten-end' }"
-                          >
+                        <KeyValue align="left">
+                          <KeyValueItem>
                             <KeyValueTitle>
                               <div class="flex-box">
                                 <div class="flex-box__cell">
@@ -754,13 +766,9 @@ export default {
                                 </div>
                               </div>
                             </KeyValueTitle>
-                            <KeyValueText :classNames="{ text: 'flex-none' }"
-                              >123-456-78901234</KeyValueText
-                            >
+                            <KeyValueText>123-456-78901234</KeyValueText>
                           </KeyValueItem>
-                          <KeyValueItem
-                            :classNames="{ item: 'justify-conten-end' }"
-                          >
+                          <KeyValueItem>
                             <KeyValueTitle>
                               <div class="flex-box">
                                 <div class="flex-box__cell">
@@ -773,13 +781,9 @@ export default {
                                 </div>
                               </div>
                             </KeyValueTitle>
-                            <KeyValueText :classNames="{ text: 'flex-none' }"
-                              >123-456-78901234</KeyValueText
-                            >
+                            <KeyValueText>123-456-78901234</KeyValueText>
                           </KeyValueItem>
-                          <KeyValueItem
-                            :classNames="{ item: 'justify-conten-end' }"
-                          >
+                          <KeyValueItem>
                             <KeyValueTitle>
                               <div class="flex-box">
                                 <div class="flex-box__cell">
@@ -792,13 +796,9 @@ export default {
                                 </div>
                               </div>
                             </KeyValueTitle>
-                            <KeyValueText :classNames="{ text: 'flex-none' }"
-                              >123-456-78901234</KeyValueText
-                            >
+                            <KeyValueText>123-456-78901234</KeyValueText>
                           </KeyValueItem>
-                          <KeyValueItem
-                            :classNames="{ item: 'justify-conten-end' }"
-                          >
+                          <KeyValueItem>
                             <KeyValueTitle>
                               <div class="flex-box">
                                 <div class="flex-box__cell">
@@ -811,13 +811,9 @@ export default {
                                 </div>
                               </div>
                             </KeyValueTitle>
-                            <KeyValueText :classNames="{ text: 'flex-none' }"
-                              >123-456-78901234</KeyValueText
-                            >
+                            <KeyValueText>123-456-78901234</KeyValueText>
                           </KeyValueItem>
-                          <KeyValueItem
-                            :classNames="{ item: 'justify-conten-end' }"
-                          >
+                          <KeyValueItem>
                             <KeyValueTitle>
                               <div class="flex-box">
                                 <div class="flex-box__cell">
@@ -830,9 +826,7 @@ export default {
                                 </div>
                               </div>
                             </KeyValueTitle>
-                            <KeyValueText :classNames="{ text: 'flex-none' }"
-                              >123-456-78901234</KeyValueText
-                            >
+                            <KeyValueText>123-456-78901234</KeyValueText>
                           </KeyValueItem>
                         </KeyValue>
                       </KeyValueText>

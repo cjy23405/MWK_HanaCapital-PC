@@ -17,6 +17,8 @@ import ButtonListItem from '@/components/ui/button/ButtonListItem.vue';
 import BasicBox from '@/components/ui/common/BasicBox.vue';
 import BasicBoxHead from '@/components/ui/common/BasicBoxHead.vue';
 import BasicBoxHeadLeft from '@/components/ui/common/BasicBoxHeadLeft.vue';
+import BasicBoxHeadRight from '@/components/ui/common/BasicBoxHeadRight.vue';
+import RoundStatus from '@/components/ui/text/RoundStatus.vue';
 import KeyValue from '@/components/ui/text/KeyValue.vue';
 import KeyValueItem from '@/components/ui/text/KeyValueItem.vue';
 import KeyValueTitle from '@/components/ui/text/KeyValueTitle.vue';
@@ -49,6 +51,8 @@ export default {
     BasicBox,
     BasicBoxHead,
     BasicBoxHeadLeft,
+    BasicBoxHeadRight,
+    RoundStatus,
     KeyValue,
     KeyValueItem,
     KeyValueTitle,
@@ -75,9 +79,9 @@ export default {
     };
 
     const state = reactive({
-      billingMethodError: false,
-      addressError: false,
-      emailError: false,
+      billingMethodError: [false, false, false, false, false],
+      addressError: [false, false, false, false, false],
+      emailError: [false, false, false, false, false],
     });
 
     onMounted(() => {
@@ -176,7 +180,181 @@ export default {
 
     <div class="row-margin-block-small row-margin-bottom-none">
       <ul class="reset-list">
-        <li v-for="i in 5" :key="i" class="row-margin-contents">
+        <!-- Case : 연체 -->
+        <li class="row-margin-contents">
+          <BasicBox>
+            <BasicBoxHead>
+              <BasicBoxHeadLeft>
+                <h3 class="text-title-2 font-weight-medium">
+                  오토리스 20고5678
+                </h3>
+                <p
+                  class="text-body-3 color-gray-tertiary row-margin-item-small"
+                >
+                  BMW 435d
+                </p>
+                <p
+                  class="text-body-3 color-gray-tertiary row-margin-item-small"
+                >
+                  L99999999999999
+                </p>
+              </BasicBoxHeadLeft>
+              <BasicBoxHeadRight>
+                <RoundStatus theme="nonary" size="large" :block="true">
+                  연체
+                </RoundStatus>
+              </BasicBoxHeadRight>
+            </BasicBoxHead>
+
+            <KeyValue :wrap="true">
+              <KeyValueItem>
+                <KeyValueTitle>대출금액</KeyValueTitle>
+                <KeyValueText>6,265,200 원</KeyValueText>
+              </KeyValueItem>
+
+              <KeyValueItem>
+                <KeyValueTitle>대출기간</KeyValueTitle>
+                <KeyValueText>2021.02.02 ~ 2022.02.02</KeyValueText>
+              </KeyValueItem>
+
+              <KeyValueItem>
+                <KeyValueTitle>결제일</KeyValueTitle>
+                <KeyValueText>05일</KeyValueText>
+              </KeyValueItem>
+            </KeyValue>
+
+            <BasicBox theme="tertiary" className="row-margin-contents">
+              <FormList>
+                <FormListItem
+                  titleText="청구방법"
+                  target="#MI_P00_p004_billingMethod_0"
+                  :selectOnly="true"
+                >
+                  <FormInvalid :error="state.billingMethodError[0]">
+                    <InputBlock :error="state.billingMethodError[0]">
+                      <InputBlockCell :flexible="true">
+                        <BasicSelect
+                          :options="[
+                            {
+                              value: '1',
+                              label: '미발송',
+                            },
+                            {
+                              value: '2',
+                              label: '온라인(SMS)',
+                            },
+                            {
+                              value: '3',
+                              label: '우편',
+                            },
+                            {
+                              value: '4',
+                              label: '이메일',
+                            },
+                            {
+                              value: '5',
+                              label: '우편+이메일',
+                            },
+                            {
+                              value: '6',
+                              label: '우편(지속)',
+                            },
+                            {
+                              value: '7',
+                              label: '우편(지속)+이메일',
+                            },
+                          ]"
+                          title="청구방법"
+                          inputId="MI_P00_p004_billingMethod_0"
+                          defaultValue="1"
+                        />
+                      </InputBlockCell>
+                    </InputBlock>
+                    <FormInvalidMessage>Error Message</FormInvalidMessage>
+                  </FormInvalid>
+                </FormListItem>
+
+                <!-- Case : 우편 + 이메일, 우편(지속), 우편(지속)+이메일 선택 시 노출  -->
+                <!-- Case : 청구방법 우편 선택 시 노출  -->
+                <FormListItem
+                  titleText="청구지주소"
+                  target="#MI_P00_p004_address_0"
+                  :selectOnly="true"
+                >
+                  <FormInvalid :error="state.addressError[0]">
+                    <InputBlock :error="state.addressError[0]">
+                      <InputBlockCell :flexible="true">
+                        <BasicSelect
+                          :options="[
+                            {
+                              value: '1',
+                              label:
+                                '사업장1 (01000 인천 서구 에코로 181 하나금융 로비)',
+                            },
+                            {
+                              value: '2',
+                              label:
+                                '사업장2 (01000 인천 서구 에코로 181 하나금융 로비)',
+                            },
+                            {
+                              value: '3',
+                              label:
+                                '사업장3 (01000 인천 서구 에코로 181 하나금융 로비)',
+                            },
+                          ]"
+                          title="청구지주소"
+                          inputId="MI_P00_p004_address_0"
+                          defaultValue="1"
+                        />
+                      </InputBlockCell>
+                    </InputBlock>
+                    <FormInvalidMessage>Error Message</FormInvalidMessage>
+                  </FormInvalid>
+                </FormListItem>
+                <!-- // Case : 청구방법 우편 선택 시 노출  -->
+
+                <!-- Case : 청구방법 이메일 선택 시 노출  -->
+                <FormListItem
+                  titleText="이메일주소"
+                  target="#MI_P00_p004_email_0"
+                  :selectOnly="true"
+                >
+                  <FormInvalid :error="state.emailError[0]">
+                    <InputBlock :error="state.emailError[0]">
+                      <InputBlockCell :flexible="true">
+                        <BasicSelect
+                          :options="[
+                            {
+                              value: '1',
+                              label: 'test1@test.com',
+                            },
+                            {
+                              value: '2',
+                              label: 'test2@test.com',
+                            },
+                            {
+                              value: '3',
+                              label: 'test3@test.com',
+                            },
+                          ]"
+                          title="이메일주소"
+                          inputId="MI_P00_p004_email_0"
+                          defaultValue="1"
+                        />
+                      </InputBlockCell>
+                    </InputBlock>
+                    <FormInvalidMessage>Error Message</FormInvalidMessage>
+                  </FormInvalid>
+                </FormListItem>
+                <!-- // Case : 청구방법 이메일 선택 시 노출  -->
+                <!-- // Case : 우편 + 이메일, 우편(지속), 우편(지속)+이메일 선택 시 노출  -->
+              </FormList>
+            </BasicBox>
+          </BasicBox>
+        </li>
+        <!-- // Case : 연체 -->
+
+        <li v-for="i in 4" :key="i" class="row-margin-contents">
           <BasicBox>
             <BasicBoxHead>
               <BasicBoxHeadLeft>
@@ -220,8 +398,8 @@ export default {
                   :target="`#MI_P00_p004_billingMethod_${i}`"
                   :selectOnly="true"
                 >
-                  <FormInvalid :error="state.billingMethodError">
-                    <InputBlock :error="state.billingMethodError">
+                  <FormInvalid :error="state.billingMethodError[i]">
+                    <InputBlock :error="state.billingMethodError[i]">
                       <InputBlockCell :flexible="true">
                         <BasicSelect
                           :options="[
@@ -271,8 +449,8 @@ export default {
                   :target="`#MI_P00_p004_address_${i}`"
                   :selectOnly="true"
                 >
-                  <FormInvalid :error="state.addressError">
-                    <InputBlock :error="state.addressError">
+                  <FormInvalid :error="state.addressError[i]">
+                    <InputBlock :error="state.addressError[i]">
                       <InputBlockCell :flexible="true">
                         <BasicSelect
                           :options="[
@@ -309,8 +487,8 @@ export default {
                   :target="`#MI_P00_p004_email_${i}`"
                   :selectOnly="true"
                 >
-                  <FormInvalid :error="state.emailError">
-                    <InputBlock :error="state.emailError">
+                  <FormInvalid :error="state.emailError[i]">
+                    <InputBlock :error="state.emailError[i]">
                       <InputBlockCell :flexible="true">
                         <BasicSelect
                           :options="[

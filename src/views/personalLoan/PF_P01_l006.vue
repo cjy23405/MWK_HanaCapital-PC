@@ -64,12 +64,12 @@ export default {
           <template v-slot:right>
             <PopupButton @click="layerSlotProps.close()" />
           </template>
-          <PopupTitle>1원 인증</PopupTitle>
+          <PopupTitle>김하나님 계좌로 1원을 보냈습니다</PopupTitle>
           <template v-slot:sub>
             <PopupSubTitle>
               해당 계좌의 거래내역에서 입금된 1원의 입금자명을 확인 후<br />
-              <span class="color-green">하나캐피탈 뒤 숫자 세자리</span>를
-              입력해 주세요.
+              <span class="color-green">하나 뒤 숫자 세자리</span>를 입력해
+              주세요.
             </PopupSubTitle>
           </template>
         </ModalPopupHead>
@@ -86,6 +86,7 @@ export default {
           <FormListItem
             titleText="입금자명"
             target="#PF_P01_l006_accountAuthName"
+            :forceFocus="true"
           >
             <FormInvalid :error="state.nameError">
               <InputBlock :error="state.nameError">

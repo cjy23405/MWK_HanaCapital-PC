@@ -3,13 +3,11 @@
 import BasicButton from '@/components/ui/button/BasicButton.vue';
 import ButtonList from '@/components/ui/button/ButtonList.vue';
 import ButtonListItem from '@/components/ui/button/ButtonListItem.vue';
-import BasicBox from '@/components/ui/common/BasicBox.vue';
 import UiTab from '@/components/ui/tab/UiTab.vue';
 import UiTabPanel from '@/components/ui/tab/UiTabPanel.vue';
 import NavTab from '@/components/ui/tab/NavTab.vue';
 import NavTabButton from '@/components/ui/tab/NavTabButton.vue';
 import BasicHr from '@/components/ui/common/BasicHr.vue';
-import CarThumb from '@/components/ui/imageData/CarThumb.vue';
 
 import IconPerson from '@/assets/images/icon/person.svg?component';
 import IconCar from '@/assets/images/icon/car.svg?component';
@@ -25,13 +23,11 @@ export default {
     BasicButton,
     ButtonList,
     ButtonListItem,
-    BasicBox,
     UiTab,
     UiTabPanel,
     NavTab,
     NavTabButton,
     BasicHr,
-    CarThumb,
     IconPerson,
     IconCar,
     IconDate,
@@ -130,7 +126,7 @@ export default {
     </div>
 
     <div class="wide-wrap row-margin-block-group">
-      <div :class="[$style['product-benefit'], 'row-margin-block-small']">
+      <div :class="[$style['product-benefit'], 'row-margin-block-group']">
         <section :class="$style['product-benefit__section']">
           <div :class="$style['product-benefit__image']">
             <img
@@ -179,89 +175,6 @@ export default {
           </div>
         </section>
       </div>
-
-      <section class="row-margin-block-group row-margin-top-none">
-        <h3 class="text-big-3 row-margin-contents">차량정보</h3>
-        <div :class="$style['vehicle-information']">
-          <ul :class="$style['vehicle-information__list']">
-            <li :class="$style['vehicle-information__item']">
-              <BasicBox theme="senary">
-                <div class="flex-box">
-                  <div class="flex-box__cell flex-1">
-                    <h3 class="text-body-1 font-weight-light">카니발</h3>
-                    <p class="text-title-1 font-weight-bold row-margin-small">
-                      월 350,000 원~
-                    </p>
-                  </div>
-                  <div class="flex-box__cell">
-                    <CarThumb src="/images/_dummy/car-thumb.png" />
-                  </div>
-                </div>
-              </BasicBox>
-            </li>
-            <li :class="$style['vehicle-information__item']">
-              <BasicBox theme="senary">
-                <div class="flex-box">
-                  <div class="flex-box__cell flex-1">
-                    <h3 class="text-body-1 font-weight-light">카니발</h3>
-                    <p class="text-title-1 font-weight-bold row-margin-small">
-                      월 350,000 원~
-                    </p>
-                  </div>
-                  <div class="flex-box__cell">
-                    <CarThumb src="/images/_dummy/car-thumb.png" />
-                  </div>
-                </div>
-              </BasicBox>
-            </li>
-            <li :class="$style['vehicle-information__item']">
-              <BasicBox theme="senary">
-                <div class="flex-box">
-                  <div class="flex-box__cell flex-1">
-                    <h3 class="text-body-1 font-weight-light">카니발</h3>
-                    <p class="text-title-1 font-weight-bold row-margin-small">
-                      월 350,000 원~
-                    </p>
-                  </div>
-                  <div class="flex-box__cell">
-                    <CarThumb src="/images/_dummy/car-thumb.png" />
-                  </div>
-                </div>
-              </BasicBox>
-            </li>
-            <li :class="$style['vehicle-information__item']">
-              <BasicBox theme="senary">
-                <div class="flex-box">
-                  <div class="flex-box__cell flex-1">
-                    <h3 class="text-body-1 font-weight-light">카니발</h3>
-                    <p class="text-title-1 font-weight-bold row-margin-small">
-                      월 350,000 원~
-                    </p>
-                  </div>
-                  <div class="flex-box__cell">
-                    <CarThumb src="/images/_dummy/car-thumb.png" />
-                  </div>
-                </div>
-              </BasicBox>
-            </li>
-            <li :class="$style['vehicle-information__item']">
-              <BasicBox theme="senary">
-                <div class="flex-box">
-                  <div class="flex-box__cell flex-1">
-                    <h3 class="text-body-1 font-weight-light">카니발</h3>
-                    <p class="text-title-1 font-weight-bold row-margin-small">
-                      월 350,000 원~
-                    </p>
-                  </div>
-                  <div class="flex-box__cell">
-                    <CarThumb src="/images/_dummy/car-thumb.png" />
-                  </div>
-                </div>
-              </BasicBox>
-            </li>
-          </ul>
-        </div>
-      </section>
 
       <UiTab>
         <NavTab
@@ -446,8 +359,8 @@ export default {
                 >
                   <div :class="$style['basic-list__symbol']">※</div>
                   <div :class="$style['basic-list__content']">
-                    잔여렌트료 = 앞면표기 “월렌트료“ X (미청구 잔여개월 수 – 1
-                    개월) + 해지시점 당월
+                    잔여렌트료 = 앞면표기 “월렌트료” X (미청구 잔여개월 수 –
+                    1개월) + 해지시점 당월 잔여렌트
                   </div>
                 </li>
               </ul>
@@ -618,7 +531,7 @@ export default {
           <li :class="$style['basic-list__item']">
             <div :class="$style['basic-list__symbol']"></div>
             <div :class="$style['basic-list__content']">
-              준법심의필 21-1123 (2021.10.01~2022.09.30)
+              준법심의필 22-1599 (2022.10.01~2023.09.30)
             </div>
           </li>
         </ul>

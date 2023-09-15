@@ -31,6 +31,8 @@ import CheckBoxLabelText from '@/components/ui/form/CheckBoxLabelText.vue';
 import CheckBoxObject from '@/components/ui/form/CheckBoxObject.vue';
 import BasicBoxHead from '@/components/ui/common/BasicBoxHead.vue';
 import BasicBoxHeadLeft from '@/components/ui/common/BasicBoxHeadLeft.vue';
+import BasicBoxHeadRight from '@/components/ui/common/BasicBoxHeadRight.vue';
+import RoundStatus from '@/components/ui/text/RoundStatus.vue';
 import BasicBox from '@/components/ui/common/BasicBox.vue';
 import KeyValue from '@/components/ui/text/KeyValue.vue';
 import KeyValueItem from '@/components/ui/text/KeyValueItem.vue';
@@ -63,6 +65,8 @@ export default {
     BasicBox,
     BasicBoxHead,
     BasicBoxHeadLeft,
+    BasicBoxHeadRight,
+    RoundStatus,
     KeyValue,
     KeyValueItem,
     KeyValueTitle,
@@ -156,6 +160,13 @@ export default {
               L99999999999999
             </p>
           </BasicBoxHeadLeft>
+          <!-- Case : 연체 -->
+          <BasicBoxHeadRight>
+            <RoundStatus theme="nonary" size="large" :block="true">
+              연체
+            </RoundStatus>
+          </BasicBoxHeadRight>
+          <!-- // Case : 연체 -->
         </BasicBoxHead>
 
         <KeyValue :wrap="true">

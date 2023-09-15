@@ -175,7 +175,7 @@ export default {
                 </p>
               </BasicBoxHeadLeft>
               <BasicBoxHeadRight>
-                <RoundStatus size="large" :block="true"> 종료 </RoundStatus>
+                <RoundStatus size="large" :block="true">종료</RoundStatus>
               </BasicBoxHeadRight>
             </BasicBoxHead>
 
@@ -269,7 +269,7 @@ export default {
         </li>
         <!-- // Case : 연체 -->
 
-        <li class="row-margin-contents">
+        <li v-for="i in 3" :key="i" class="row-margin-contents">
           <BasicBox>
             <BasicBoxHead>
               <BasicBoxHeadLeft>
@@ -287,123 +287,6 @@ export default {
                   L99999999999999
                 </p>
               </BasicBoxHeadLeft>
-              <BasicBoxHeadRight>
-                <RoundStatus theme="nonary" size="large" :block="true">
-                  연체
-                </RoundStatus>
-              </BasicBoxHeadRight>
-            </BasicBoxHead>
-
-            <KeyValue :wrap="true">
-              <KeyValueItem>
-                <KeyValueTitle>저당설정액</KeyValueTitle>
-                <KeyValueText>17,220,000 원</KeyValueText>
-              </KeyValueItem>
-
-              <KeyValueItem>
-                <KeyValueTitle>을부번호</KeyValueTitle>
-                <KeyValueText>482A-2021-143903</KeyValueText>
-              </KeyValueItem>
-
-              <KeyValueItem>
-                <KeyValueTitle>차대번호</KeyValueTitle>
-                <KeyValueText>KLAPC56LDNB2320</KeyValueText>
-              </KeyValueItem>
-            </KeyValue>
-
-            <ButtonList
-              :wrap="true"
-              align="center"
-              :classNames="{
-                wrap: 'row-margin-contents',
-              }"
-            >
-              <ButtonListItem>
-                <BasicButton size="regular">해지 신청</BasicButton>
-              </ButtonListItem>
-            </ButtonList>
-          </BasicBox>
-        </li>
-
-        <li class="row-margin-contents">
-          <BasicBox>
-            <BasicBoxHead>
-              <BasicBoxHeadLeft>
-                <h3 class="text-title-2 font-weight-medium">
-                  오토할부 20고5678
-                </h3>
-                <p
-                  class="text-body-3 color-gray-tertiary row-margin-item-small"
-                >
-                  BMW 435d
-                </p>
-                <p
-                  class="text-body-3 color-gray-tertiary row-margin-item-small"
-                >
-                  L99999999999999
-                </p>
-              </BasicBoxHeadLeft>
-              <BasicBoxHeadRight>
-                <RoundStatus theme="nonary" size="large" :block="true">
-                  연체
-                </RoundStatus>
-              </BasicBoxHeadRight>
-            </BasicBoxHead>
-
-            <KeyValue :wrap="true">
-              <KeyValueItem>
-                <KeyValueTitle>저당설정액</KeyValueTitle>
-                <KeyValueText>17,220,000 원</KeyValueText>
-              </KeyValueItem>
-
-              <KeyValueItem>
-                <KeyValueTitle>을부번호</KeyValueTitle>
-                <KeyValueText>482A-2021-143903</KeyValueText>
-              </KeyValueItem>
-
-              <KeyValueItem>
-                <KeyValueTitle>차대번호</KeyValueTitle>
-                <KeyValueText>KLAPC56LDNB2320</KeyValueText>
-              </KeyValueItem>
-            </KeyValue>
-
-            <ButtonList
-              :wrap="true"
-              align="center"
-              :classNames="{
-                wrap: 'row-margin-contents',
-              }"
-            >
-              <ButtonListItem>
-                <BasicButton size="regular">해지 신청</BasicButton>
-              </ButtonListItem>
-            </ButtonList>
-          </BasicBox>
-        </li>
-
-        <li class="row-margin-contents">
-          <BasicBox>
-            <BasicBoxHead>
-              <BasicBoxHeadLeft>
-                <h3 class="text-title-2 font-weight-medium">
-                  오토할부 20고5678
-                </h3>
-                <p
-                  class="text-body-3 color-gray-tertiary row-margin-item-small"
-                >
-                  BMW 435d
-                </p>
-                <p
-                  class="text-body-3 color-gray-tertiary row-margin-item-small"
-                >
-                  L99999999999999
-                </p>
-              </BasicBoxHeadLeft>
-              <BasicBoxHeadRight>
-                <RoundStatus theme="nonary" size="large" :block="true">
-                  연체
-                </RoundStatus>
-              </BasicBoxHeadRight>
             </BasicBoxHead>
 
             <KeyValue :wrap="true">
