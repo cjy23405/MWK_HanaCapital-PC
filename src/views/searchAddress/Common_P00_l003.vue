@@ -20,6 +20,7 @@ import KeyValueText from '@/components/ui/text/KeyValueText.vue';
 import FormList from '@/components/ui/form/FormList.vue';
 import FormListItem from '@/components/ui/form/FormListItem.vue';
 import ContentsButton from '@/components/ui/button/ContentsButton.vue';
+import BasicBox from '@/components/ui/common/BasicBox.vue';
 
 export default {
   components: {
@@ -41,6 +42,7 @@ export default {
     FormList,
     FormListItem,
     ContentsButton,
+    BasicBox,
   },
   setup() {
     const state = reactive({
@@ -218,6 +220,7 @@ export default {
         <section class="row-margin-container-medium">
           <h3 class="text-body-1 row-margin-item-group">해당 주소 선택</h3>
 
+          <!-- Case : 표준화 주소 있을 경우 -->
           <ul :class="[$style['address-list'], $style['address-list--select']]">
             <li :class="$style['address-list__item']">
               <ContentsButton>
@@ -264,6 +267,34 @@ export default {
               </ContentsButton>
             </li>
           </ul>
+          <!-- // Case : 표준화 주소 있을 경우 -->
+
+          <!-- Case : 표준화 주소 없을 경우 -->
+          <div :class="$style['empty-standardization']">
+            <div :class="$style['empty-standardization__info']">
+              <p :class="$style['empty-standardization__text']">
+                입력하신 주소는<br />
+                표준화 및 도로명이 없는 주소입니다.
+              </p>
+            </div>
+
+            <BasicBox>
+              <p :class="$style['empty-standardization__result']">
+                <span :class="$style['empty-standardization__zip-code']"
+                  >04538</span
+                >
+                <span :class="$style['empty-standardization__address']"
+                  >인천 서구 청라동 123</span
+                >
+              </p>
+              <div :class="$style['empty-standardization__button']">
+                <BasicButton size="small" :line="true" :inline="true">
+                  해당 주소로 입력
+                </BasicButton>
+              </div>
+            </BasicBox>
+          </div>
+          <!-- // Case : 표준화 주소 없을 경우 -->
         </section>
         <!-- // Case : 상세주소 입력 후 노출 -->
       </div>

@@ -24,7 +24,6 @@ import BoxCheckList from '@/components/ui/form/BoxCheckList.vue';
 import BoxCheckListItem from '@/components/ui/form/BoxCheckListItem.vue';
 import BoxCheck from '@/components/ui/form/BoxCheck.vue';
 import BoxCheckLabel from '@/components/ui/form/BoxCheckLabel.vue';
-import BasicDatepicker from '@/components/ui/form/BasicDatepicker.vue';
 import FormHelpText from '@/components/ui/form/FormHelpText.vue';
 import NoticeText from '@/components/ui/text/NoticeText.vue';
 import ButtonList from '@/components/ui/button/ButtonList.vue';
@@ -52,7 +51,6 @@ export default {
     BoxCheckListItem,
     BoxCheck,
     BoxCheckLabel,
-    BasicDatepicker,
     FormHelpText,
     NoticeText,
     ButtonList,
@@ -87,6 +85,7 @@ export default {
       routeError: false,
       objectError: false,
       ownerError: false,
+      domesticBankNameError: false,
     });
 
     onMounted(() => {
@@ -349,17 +348,15 @@ export default {
 
         <FormList>
           <!-- Case : '주민등록증' 선택 시  -->
-          <FormListItem
-            titleText="발급일자"
-            target="#PF_P01_p005_day_001_Button"
-          >
+          <FormListItem titleText="발급일자" target="#PF_P01_p005_day_001">
             <FormInvalid :error="state.dayError001">
               <InputBlock :error="state.dayError001">
                 <InputBlockCell :flexible="true">
-                  <BasicDatepicker
+                  <BasicInput
+                    type="number"
+                    pattern="\d*"
                     title="발급일자"
                     id="PF_P01_p005_day_001"
-                    buttonId="PF_P01_p005_day_001_Button"
                   />
                 </InputBlockCell>
               </InputBlock>
@@ -491,6 +488,26 @@ export default {
         <h3 class="text-title-1 row-margin-contents">결제 정보</h3>
 
         <FormList>
+          <!-- Case : 개인사업자일 경우 -->
+          <FormListItem
+            titleText="예금주명"
+            target="PF_P01_p005_domesticBankName"
+          >
+            <FormInvalid :error="state.domesticBankNameError">
+              <InputBlock :error="state.domesticBankNameError">
+                <InputBlockCell :flexible="true">
+                  <BasicInput
+                    title="예금주명"
+                    id="PF_P01_p005_domesticBankName"
+                    defaultValue="김하나"
+                  />
+                </InputBlockCell>
+              </InputBlock>
+              <FormInvalidMessage>Error Message</FormInvalidMessage>
+            </FormInvalid>
+          </FormListItem>
+          <!-- // Case : 개인사업자일 경우 -->
+
           <FormListItem
             titleText="은행명"
             target="#PF_P01_p005_bank"
@@ -675,6 +692,13 @@ export default {
                 </template>
               </InputBlock>
               <FormInvalidMessage>Error Message</FormInvalidMessage>
+
+              <!-- Case : 대출신청금액 입력 시 노출 -->
+              <FormHelpText :classNames="{ wrap: 'align-right' }">
+                2억원
+              </FormHelpText>
+              <!-- // Case : 대출신청금액 입력 시 노출 -->
+
               <NoticeText
                 :classNames="{
                   wrap: 'row-margin-item-medium',
